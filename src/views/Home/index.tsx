@@ -8,7 +8,7 @@ import {
   // RightIntroduction,
 } from "./style";
 import WaveAnimation from "./components/wave";
-import ContactEmail from "./components/contactEmail";
+import ContactEmail from "../../components/contactEmail";
 import ServiceSection from "./components/Servicios";
 
 const Home = () => {

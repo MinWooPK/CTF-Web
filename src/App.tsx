@@ -10,11 +10,6 @@ import Home from "./views/Home";
 import ServicesPage from "./views/Services";
 import AboutPage from "./views/About";
 import JobPage from "./views/Job";
-// import GetTaxiPage from "./views/GetTaxi";
-// import ServicesPage from "./views/Services";
-// import TariffsPage from "./views/Tariffs";
-// import ContactPage from "./views/Contact";
-// import AboutUsPage from "./views/AboutUs";
 
 export default function App() {
   return (
@@ -24,9 +19,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" index element={<Home />} />
-            <Route path="/Services" element={<ServicesPage />} />
-            <Route path="/About" element={<AboutPage />} />
-            <Route path="/Job" element={<JobPage />} />
+            <Route path="/Servicios" element={<ServicesPage />} />
+            <Route path="/Sobre" element={<AboutPage />} />
+            <Route path="/Carreras" element={<JobPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
