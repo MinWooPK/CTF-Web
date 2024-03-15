@@ -36,9 +36,10 @@ export const ServiceDetailSubScetion = styled.div<{ isReversed?: boolean }>`
   align-items: center;
   ${({ isReversed }) => isReversed && "flex-direction: row-reverse;"}
   @media (max-width: 1020px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: start;
     padding: 20px 10px;
+    gap: 40px;
   }
 `;
 export const ServiceDetailSubScetion1 = styled.div`
@@ -73,4 +74,10 @@ export const ServiceDetailSubTitleDetail = styled.p`
 
 export const ServiceDetailButton = styled.div`
   padding-top: 56px;
+`;
+export const ServiceHomeSVG = styled.div`
+  width: 463px;
+  @media (max-width: 1020px) {
+    width: 292px;
+  }
 `;

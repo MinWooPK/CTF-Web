@@ -11,6 +11,7 @@ import {
   ServiceDetailSubScetion1,
   ServiceDetailSubTitle,
   ServiceDetailSubTitleDetail,
+  ServiceHomeSVG,
   ServiceSubContainer,
 } from "./style";
 
@@ -64,7 +65,7 @@ const ServiceSection = () => {
                 </a>
               </ServiceDetailButton>
             </ServiceDetailSubScetion1>
-            {section.homeComponent}
+            <ServiceHomeSVG>{section.homeComponent}</ServiceHomeSVG>
           </ServiceDetailSubScetion>
         ))}
       </ServiceSubContainer>

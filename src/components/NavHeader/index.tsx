@@ -57,13 +57,7 @@ const NavHeader = () => {
             <StieMenuHref href="/">Inicio</StieMenuHref>
           </StieMenuLi>
           <StieMenuLi>
-            <a
-              href="mailto:codetofit@codetofit.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <StieMenuHref>Servicios</StieMenuHref>
-            </a>
+            <StieMenuHref onClick={handleContactClick}>Servicios</StieMenuHref>
           </StieMenuLi>
           <StieMenuLi>
             <StieMenuHref href="/AboutUs">Sobre Nosotros</StieMenuHref>
@@ -98,13 +92,9 @@ const NavHeader = () => {
             </StieMenuLi>
             <StieMenuLi>
               {/* <StieMenuHref href="/Servicios">Servicios</StieMenuHref> */}{" "}
-              <a
-                href="mailto:codetofit@codetofit.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <StieMenuHref>Servicios</StieMenuHref>
-              </a>
+              <StieMenuHref onClick={handleContactClick}>
+                Servicios
+              </StieMenuHref>
             </StieMenuLi>
             <StieMenuLi>
               <StieMenuHref href="/AboutUs">Sobre Nosostros</StieMenuHref>
