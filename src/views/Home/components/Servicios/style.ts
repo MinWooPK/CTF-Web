@@ -35,6 +35,11 @@ export const ServiceDetailSubScetion = styled.div<{ isReversed?: boolean }>`
   gap: 140px;
   align-items: center;
   ${({ isReversed }) => isReversed && "flex-direction: row-reverse;"}
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    text-align: start;
+    padding: 20px 10px;
+  }
 `;
 export const ServiceDetailSubScetion1 = styled.div`
   flex: 1;
@@ -49,6 +54,9 @@ export const ServiceDetailSubTitle = styled.h1`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  @media (max-width: 1020px) {
+    font-size: 32px;
+  }
 `;
 export const ServiceDetailSubTitleDetail = styled.p`
   color: #1c1c1c;
@@ -58,6 +66,9 @@ export const ServiceDetailSubTitleDetail = styled.p`
   line-height: normal;
   max-width: 606px;
   padding: 32px 0 0;
+  @media (max-width: 1020px) {
+    font-size: 18px;
+  }
 `;
 
 export const ServiceDetailButton = styled.div`
