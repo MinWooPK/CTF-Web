@@ -31,7 +31,6 @@ const Home = () => {
         </HomeMainContainer>
 
         <ServiceSection />
-        <WaveAnimation />
         <ContactEmail contactId="Contact" />
       </Container>
     </>
