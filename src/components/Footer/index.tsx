@@ -10,8 +10,10 @@ import {
 
 const links = [
   { text: "Inicio", url: "/" },
-  { text: "Servicios", url: "/Servicios" },
-  { text: "Sobre", url: "/Sobre" },
+  // { text: "Servicios", url: "/Servicios" },
+  { text: "Servicios", url: "/" },
+
+  { text: "Sobre Nosotros", url: "/AboutUs" },
   { text: "Carreras", url: "/Carreras" },
 ];
 

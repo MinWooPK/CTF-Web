@@ -5,11 +5,12 @@ import { ConctactDetail, ConctactSubDetail, ContactSection } from "./style";
 
 interface ContactEmailProps {
   type?: string;
+  contactId?: string;
 }
 
-const ContactEmail: React.FC<ContactEmailProps> = ({ type }) => {
+const ContactEmail: React.FC<ContactEmailProps> = ({ type, contactId }) => {
   return (
-    <ContactSection secondary={type === "secondary"}>
+    <ContactSection secondary={type === "secondary"} id={contactId}>
       <Logo />
       <ConctactDetail>Envíanos un correo a:</ConctactDetail>
       <a href="mailto:codetofit@codetofit.com" target="_blank" rel="noreferrer">

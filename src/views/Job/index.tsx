@@ -6,6 +6,11 @@ import {
   JobDetailContainer,
   JobSubDetail,
   JobSubDetailBold,
+  JobThemeSpecial,
+  JobThemeSpecialContainer,
+  JobThemeSpecialDetail,
+  JobThemeSpecialDetailP,
+  JobThemeSpecialTitle,
   JobTitle,
 } from "./style";
 
@@ -28,8 +33,37 @@ const JobPage = () => {
             Fundamentalmente trabajamos con las siguientes tecnologías:
           </JobDetail>
         </JobDetailContainer>
+        <JobThemeSpecialContainer>
+          <JobThemeSpecial>
+            <JobThemeSpecialTitle>Frontend</JobThemeSpecialTitle>
+            <JobThemeSpecialDetail>
+              <JobThemeSpecialDetailP>React</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Angular</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Vue.js</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Blazor</JobThemeSpecialDetailP>
+            </JobThemeSpecialDetail>
+          </JobThemeSpecial>
+          <JobThemeSpecial>
+            <JobThemeSpecialTitle>Backend</JobThemeSpecialTitle>
+            <JobThemeSpecialDetail>
+              <JobThemeSpecialDetailP>NetCore</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Net</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>PHP</JobThemeSpecialDetailP>
+            </JobThemeSpecialDetail>
+          </JobThemeSpecial>
+          <JobThemeSpecial>
+            <JobThemeSpecialTitle>
+              Data base, DevOps & Cloud
+            </JobThemeSpecialTitle>
+            <JobThemeSpecialDetail>
+              <JobThemeSpecialDetailP>SQL</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Server</JobThemeSpecialDetailP>
+              <JobThemeSpecialDetailP>Azure</JobThemeSpecialDetailP>
+            </JobThemeSpecialDetail>
+          </JobThemeSpecial>
+        </JobThemeSpecialContainer>
       </JobContainer>
-      <ContactEmail />
+      <ContactEmail contactId="Contact" />
     </Container>
   );
 };

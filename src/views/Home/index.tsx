@@ -29,7 +29,7 @@ const Home = () => {
         <RightIntroduction></RightIntroduction> */}
         <ServiceSection />
         <WaveAnimation />
-        <ContactEmail />
+        <ContactEmail contactId="Contact" />
       </Container>
     </>
   );

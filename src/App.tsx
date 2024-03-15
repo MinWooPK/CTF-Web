@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" index element={<Home />} />
             <Route path="/Servicios" element={<ServicesPage />} />
-            <Route path="/Sobre" element={<AboutPage />} />
+            <Route path="/AboutUs" element={<AboutPage />} />
             <Route path="/Carreras" element={<JobPage />} />
           </Route>
         </Routes>

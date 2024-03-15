@@ -55,7 +55,13 @@ const ServiceSection = () => {
                 </ServiceDetailSubTitleDetail>
               ))}
               <ServiceDetailButton>
-                <Button children={"Saber más"} type={"primary"} />
+                <a
+                  href="mailto:codetofit@codetofit.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button children={"Saber más"} type={"primary"} />
+                </a>
               </ServiceDetailButton>
             </ServiceDetailSubScetion1>
             {section.homeComponent}

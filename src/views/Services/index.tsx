@@ -1,17 +1,7 @@
+import ContactEmail from "../../components/contactEmail";
+
 const ServicesPage = () => {
-  return (
-    <>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-    </>
-  );
+  return <ContactEmail />;
 };
 
 export default ServicesPage;

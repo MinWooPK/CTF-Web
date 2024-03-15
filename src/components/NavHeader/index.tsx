@@ -37,7 +37,15 @@ const NavHeader = () => {
     // setMenuOpen(!isMenuOpen);
     setNavVisible(!navVisible);
   };
-
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("Contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    if (navVisible) {
+      setNavVisible(false);
+    }
+  };
   return (
     <Navbar>
       <ContainerNavbar>
@@ -49,16 +57,28 @@ const NavHeader = () => {
             <StieMenuHref href="/">Inicio</StieMenuHref>
           </StieMenuLi>
           <StieMenuLi>
-            <StieMenuHref href="/Servicios">Servicios</StieMenuHref>
+            <a
+              href="mailto:codetofit@codetofit.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <StieMenuHref>Servicios</StieMenuHref>
+            </a>
           </StieMenuLi>
           <StieMenuLi>
-            <StieMenuHref href="/Sobre">Sobre</StieMenuHref>
+            <StieMenuHref href="/AboutUs">Sobre Nosotros</StieMenuHref>
           </StieMenuLi>
           <StieMenuLi>
             <StieMenuHref href="/Carreras">Carreras</StieMenuHref>
           </StieMenuLi>
         </SiteMenu>
-        {isDesktop && <Button children={"Contacto"} type={"secondary"} />}
+        {isDesktop && (
+          <Button
+            children={"Contacto"}
+            type={"secondary"}
+            onHandleClick={handleContactClick}
+          />
+        )}
         <HamburgerMenu
           className={isMenuOpen ? "open" : ""}
           onClick={toggleMenu}
@@ -77,16 +97,23 @@ const NavHeader = () => {
               <StieMenuHref href="/">Inicio</StieMenuHref>
             </StieMenuLi>
             <StieMenuLi>
-              <StieMenuHref href="/Servicios">Servicios</StieMenuHref>
+              {/* <StieMenuHref href="/Servicios">Servicios</StieMenuHref> */}{" "}
+              <a
+                href="mailto:codetofit@codetofit.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <StieMenuHref>Servicios</StieMenuHref>
+              </a>
             </StieMenuLi>
             <StieMenuLi>
-              <StieMenuHref href="/Sobre">Sobre</StieMenuHref>
+              <StieMenuHref href="/AboutUs">Sobre Nosostros</StieMenuHref>
             </StieMenuLi>
             <StieMenuLi>
               <StieMenuHref href="/Carreras">Carreras</StieMenuHref>
             </StieMenuLi>
             <StieMenuLi>
-              <StieMenuHref href="/Contacto">Contacto</StieMenuHref>
+              <StieMenuHref onClick={handleContactClick}>Contacto</StieMenuHref>
             </StieMenuLi>
           </MobileUlDiv>
         </NavBlack>

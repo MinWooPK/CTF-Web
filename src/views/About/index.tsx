@@ -21,7 +21,7 @@ const AboutPage = () => {
           Conócenos, cuéntanos tu proyecto, tu idea, y la hacemos realidad.
         </ContainerSubTitle>
       </ContainerBox>
-      <ContactEmail type="secondary" />
+      <ContactEmail type="secondary" contactId="Contact" />
     </Container>
   );
 };
