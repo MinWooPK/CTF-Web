@@ -27,19 +27,9 @@ const Home = () => {
             <span>aplicaciones web </span>e integración de &nbsp;
             <span>sistemas</span>
           </HomeDetail>
+          <WaveAnimation />
         </HomeMainContainer>
-        {/* <LeftIntroduction>
-          <TitleIntroduction>
-            Te ayudamos a encajar las piezas
-          </TitleIntroduction>
-          <DefinitionIntroduction>Desarrollamos tu</DefinitionIntroduction>
 
-          <DefinitionIntroduction>
-            Somos especialistas en transformación digital, desarrollo de
-            aplicaciones web e integración de sistemas
-          </DefinitionIntroduction>
-        </LeftIntroduction>
-        <RightIntroduction></RightIntroduction> */}
         <ServiceSection />
         <WaveAnimation />
         <ContactEmail contactId="Contact" />

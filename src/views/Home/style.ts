@@ -6,6 +6,7 @@ export const HomeMainContainer = styled.section`
   align-items: center;
   text-align: center;
   gap: 40px;
+  height: 600px;
 `;
 export const HomeTitle = styled.div`
   color: #1c1c1c;

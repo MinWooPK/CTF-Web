@@ -5,8 +5,8 @@ const WaveAnimation = () => {
   return (
     <WaveContainer>
       {/* <Wave /> <Wave /> <Wave /> <Wave /> <Wave /> <Wave /> <Wave /> <Wave /> */}
-      {/* <Wave />
-      <Wave /> */}
+      <Wave />
+      {/* <Wave /> */}
     </WaveContainer>
   );
 };
