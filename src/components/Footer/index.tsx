@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import {
   FooterCodeToFit,
   FooterDescription,
   FooterDetail,
   LinkBar,
   LinkLi,
-  StyledLink, // Añade el componente StyledLink aquí
+  StyledLink,
 } from "./style";
 
 const links = [

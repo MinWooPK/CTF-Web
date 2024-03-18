@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import Home1 from "../../../../assets/svg/Home1";
 import Home2 from "../../../../assets/svg/Home2";
 import Home3 from "../../../../assets/svg/Home3";
-import Logo from "../../../../assets/svg/logo";
 import Button from "../../../../components/Button/Button";
 import {
   ServiceContainer,
@@ -16,6 +18,17 @@ import {
 } from "./style";
 
 const ServiceSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Detecta cuando el 50% del elemento está en la vista
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
   // Datos de las secciones de servicios
   const serviceSectionsData = [
     {
@@ -45,28 +58,35 @@ const ServiceSection = () => {
   return (
     <ServiceContainer>
       <ServiceDetail>Nuestros Servicios</ServiceDetail>
-      <ServiceSubContainer>
+      <ServiceSubContainer ref={ref}>
         {serviceSectionsData.map((section, index) => (
-          <ServiceDetailSubScetion key={index} isReversed={index === 1}>
-            <ServiceDetailSubScetion1>
-              <ServiceDetailSubTitle>{section.title}</ServiceDetailSubTitle>
-              {section.description.map((text, i) => (
-                <ServiceDetailSubTitleDetail key={i}>
-                  {text}
-                </ServiceDetailSubTitleDetail>
-              ))}
-              <ServiceDetailButton>
-                <a
-                  href="mailto:codetofit@codetofit.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button children={"Saber más"} type={"primary"} />
-                </a>
-              </ServiceDetailButton>
-            </ServiceDetailSubScetion1>
-            <ServiceHomeSVG>{section.homeComponent}</ServiceHomeSVG>
-          </ServiceDetailSubScetion>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 100 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <ServiceDetailSubScetion key={index} isReversed={index === 1}>
+              <ServiceDetailSubScetion1>
+                <ServiceDetailSubTitle>{section.title}</ServiceDetailSubTitle>
+                {section.description.map((text, i) => (
+                  <ServiceDetailSubTitleDetail key={i}>
+                    {text}
+                  </ServiceDetailSubTitleDetail>
+                ))}
+                <ServiceDetailButton>
+                  <a
+                    href="mailto:codetofit@codetofit.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button children={"Saber más"} type={"primary"} />
+                  </a>
+                </ServiceDetailButton>
+              </ServiceDetailSubScetion1>
+              <ServiceHomeSVG>{section.homeComponent}</ServiceHomeSVG>
+            </ServiceDetailSubScetion>
+          </motion.div>
         ))}
       </ServiceSubContainer>
     </ServiceContainer>

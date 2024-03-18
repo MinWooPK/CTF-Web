@@ -28,12 +28,31 @@ export const LinkLi = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  &&& {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative; /* Añade posición relativa para que los pseudoelementos absolutos funcionen correctamente */
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px; /* Ajusta la posición del subrayado */
+      width: 100%;
+      height: 2px; /* Ajusta el grosor del subrayado */
+      background-color: #fff; /* Color del subrayado */
+      transform: scaleX(0); /* Inicialmente no visible */
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1); /* Aparece el subrayado al pasar el mouse */
+    }
+  }
 `;
 
 export const FooterDetail = styled.div`

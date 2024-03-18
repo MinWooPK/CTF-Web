@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ServiceContainer = styled.div`
@@ -29,12 +30,18 @@ export const ServiceDetail = styled.h2`
   font-weight: 250;
   line-height: normal;
 `;
-export const ServiceDetailSubScetion = styled.div<{ isReversed?: boolean }>`
+export const ServiceDetailSubScetion = styled(motion.div)<{
+  isReversed?: boolean;
+}>`
   display: flex;
   padding: 20px 120px;
-  gap: 140px;
+  gap: 120px;
   align-items: center;
   ${({ isReversed }) => isReversed && "flex-direction: row-reverse;"}
+  @media (min-width: 1021px) and (max-width: 1280px) {
+    padding: 20px 40px;
+    gap: 60px;
+  }
   @media (max-width: 1020px) {
     flex-direction: column-reverse;
     text-align: start;
@@ -74,6 +81,11 @@ export const ServiceDetailSubTitleDetail = styled.p`
 
 export const ServiceDetailButton = styled.div`
   padding-top: 56px;
+  display: flex;
+  @media (max-width: 1020px) {
+    justify-content: center;
+    /* width: 292px; */
+  }
 `;
 export const ServiceHomeSVG = styled.div`
   width: 463px;

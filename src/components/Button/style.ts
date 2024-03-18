@@ -35,7 +35,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
     background: #053746;
     box-shadow: 0px 23.364px 51.921px rgba(189, 189, 189, 0.30);
      @media (max-width: 768px) {
-      width:265px
+      width:310px
   }
   span {
       position: relative;
