@@ -19,15 +19,15 @@ import {
 
 const ServiceSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { ref, inView } = useInView({
-    threshold: 0.5, // Detecta cuando el 50% del elemento está en la vista
+  const { ref: serviceRef, inView: serviceInView } = useInView({
+    threshold: 0.175, // Detecta cuando el 50% del elemento está en la vista
   });
 
   useEffect(() => {
-    if (inView) {
+    if (serviceInView) {
       setIsVisible(true);
     }
-  }, [inView]);
+  }, [serviceInView]);
 
   // Datos de las secciones de servicios
   const serviceSectionsData = [
@@ -58,7 +58,7 @@ const ServiceSection = () => {
   return (
     <ServiceContainer>
       <ServiceDetail>Nuestros Servicios</ServiceDetail>
-      <ServiceSubContainer ref={ref}>
+      <ServiceSubContainer ref={serviceRef}>
         {serviceSectionsData.map((section, index) => (
           <motion.div
             key={index}

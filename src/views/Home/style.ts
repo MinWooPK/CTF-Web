@@ -7,6 +7,10 @@ export const HomeMainContainer = styled.section`
   text-align: center;
   gap: 40px;
   height: 600px;
+  padding-top: 160px;
+  @media (max-width: 1020px) {
+    padding-top: 100px;
+  }
 `;
 export const HomeTitle = styled.div`
   color: #1c1c1c;

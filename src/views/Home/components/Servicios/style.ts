@@ -13,7 +13,7 @@ export const ServiceSubContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 200px;
 `;
 
 export const ConctactDetail = styled.p`
