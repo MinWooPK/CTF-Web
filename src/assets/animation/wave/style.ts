@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const waveAnimation = keyframes`
@@ -26,7 +27,7 @@ const widthTransition = keyframes`
     stroke-width: 0.15px;
   }
   50% {
-    stroke-width: 0.2px;
+    stroke-width: 0.25px;
   }
   75% {
     stroke-width: 0.15px;
@@ -38,15 +39,14 @@ const widthTransition = keyframes`
 
 export const StyledSVG = styled.svg`
   position: relative;
-  width: 120%;
+  width: 110%;
+  min-width: 1200px;
   overflow: hidden;
   padding: 32px 0px 64px;
   transform: scale(1.2);
-  height: 400px;
   rotate: -6deg;
+  height: 400px;
   bottom: 100px;
-  right: 20px;
-  z-index: 29;
 `;
 
 export const StyledUse = styled.use`
@@ -54,51 +54,47 @@ export const StyledUse = styled.use`
   stroke-linecap: round;
   stroke-miterlimit: 4;
   opacity: 0.8;
-  animation-name: ${waveAnimation};
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transition-delay: 0s;
-  transition-duration: 1.2s;
-  transition-property: fill;
-  transition-timing-function: ease-in-out;
+  animation: ${waveAnimation} infinite linear,
+    ${colorTransition} 4s ease-in-out infinite,
+    ${widthTransition} 2s ease-in-out infinite;
 
   &:nth-child(1) {
-    animation-duration: 7s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #121f4e;
+    animation-duration: 9s;
   }
 
   &:nth-child(2) {
-    animation-duration: 9s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
+    animation-duration: 13s;
   }
 
   &:nth-child(3) {
-    animation-duration: 14s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #16e2c5;
+    animation-duration: 19s;
   }
 
   &:nth-child(4) {
-    animation-duration: 19s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
+    animation-duration: 24s;
   }
 
   &:nth-child(5) {
-    animation-duration: 24s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #16e2c5;
+    animation-duration: 19s;
   }
 
   &:nth-child(6) {
-    animation-duration: 35s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
+    animation-duration: 14s;
   }
 
   &:nth-child(7) {
-    animation-duration: 17s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #121f4e;
+    animation-duration: 9s;
   }
 
   &:nth-child(8) {
-    animation-duration: 19s;
-    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
+    animation-duration: 24s;
   }
 `;

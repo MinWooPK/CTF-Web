@@ -13,8 +13,8 @@ const WaveSVG = () => {
         <StyledUse xlinkHref="#wave" x="0" y="0" />
         <StyledUse xlinkHref="#wave" x="-2" y=".25" />
         <StyledUse xlinkHref="#wave" x="-2.5" y=".5" />
-        {/* <StyledUse xlinkHref="#wave" x="-5" y=".75" />
-        <StyledUse xlinkHref="#wave" x="-7.5" y="1" />
+        {/* <StyledUse xlinkHref="#wave" x="-5" y=".75" /> */}
+        {/* <StyledUse xlinkHref="#wave" x="-7.5" y="1" />
         <StyledUse xlinkHref="#wave" x="-10" y="1.25" />
         <StyledUse xlinkHref="#wave" x="-12.5" y="1.5" />
         <StyledUse xlinkHref="#wave" x="-15" y="1.75" /> */}
