@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 const WaveImg: string = require("../../../../assets/animation/wave");
 
 export const WaveContainer = styled.div`
-  bottom: 0;
-  left: 0;
+  /* bottom: 0; */
   width: 100%;
   overflow: hidden;
-  position: relative;
+  /* position: absolute; */
+  z-index: 100;
 `;
 
 export const waveAnimation = keyframes`
