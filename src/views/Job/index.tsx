@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ContactEmail from "../../components/contactEmail";
 import {
   Container,
@@ -33,35 +34,41 @@ const JobPage = () => {
             Fundamentalmente trabajamos con las siguientes tecnologías:
           </JobDetail>
         </JobDetailContainer>
-        <JobThemeSpecialContainer>
-          <JobThemeSpecial>
-            <JobThemeSpecialTitle>Frontend</JobThemeSpecialTitle>
-            <JobThemeSpecialDetail>
-              <JobThemeSpecialDetailP>React</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Angular</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Vue.js</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Blazor</JobThemeSpecialDetailP>
-            </JobThemeSpecialDetail>
-          </JobThemeSpecial>
-          <JobThemeSpecial>
-            <JobThemeSpecialTitle>Backend</JobThemeSpecialTitle>
-            <JobThemeSpecialDetail>
-              <JobThemeSpecialDetailP>NetCore</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Net</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>PHP</JobThemeSpecialDetailP>
-            </JobThemeSpecialDetail>
-          </JobThemeSpecial>
-          <JobThemeSpecial>
-            <JobThemeSpecialTitle>
-              Data base, DevOps & Cloud
-            </JobThemeSpecialTitle>
-            <JobThemeSpecialDetail>
-              <JobThemeSpecialDetailP>SQL</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Server</JobThemeSpecialDetailP>
-              <JobThemeSpecialDetailP>Azure</JobThemeSpecialDetailP>
-            </JobThemeSpecialDetail>
-          </JobThemeSpecial>
-        </JobThemeSpecialContainer>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }} // Estado inicial
+          animate={{ opacity: 1, y: 0 }} // Estado animado
+          transition={{ duration: 0.5 }} // Duración de la animación
+        >
+          <JobThemeSpecialContainer>
+            <JobThemeSpecial>
+              <JobThemeSpecialTitle>Frontend</JobThemeSpecialTitle>
+              <JobThemeSpecialDetail>
+                <JobThemeSpecialDetailP>React</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Angular</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Vue.js</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Blazor</JobThemeSpecialDetailP>
+              </JobThemeSpecialDetail>
+            </JobThemeSpecial>
+            <JobThemeSpecial>
+              <JobThemeSpecialTitle>Backend</JobThemeSpecialTitle>
+              <JobThemeSpecialDetail>
+                <JobThemeSpecialDetailP>NetCore</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Net</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>PHP</JobThemeSpecialDetailP>
+              </JobThemeSpecialDetail>
+            </JobThemeSpecial>
+            <JobThemeSpecial>
+              <JobThemeSpecialTitle>
+                Data base, DevOps & Cloud
+              </JobThemeSpecialTitle>
+              <JobThemeSpecialDetail>
+                <JobThemeSpecialDetailP>SQL</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Server</JobThemeSpecialDetailP>
+                <JobThemeSpecialDetailP>Azure</JobThemeSpecialDetailP>
+              </JobThemeSpecialDetail>
+            </JobThemeSpecial>
+          </JobThemeSpecialContainer>
+        </motion.div>
       </JobContainer>
       <ContactEmail contactId="Contact" />
     </Container>
