@@ -1,6 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+const waveAnimation = keyframes`
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
 const colorTransition = keyframes`
   0% {
     stroke: #2e838f;
@@ -31,74 +37,76 @@ const widthTransition = keyframes`
   }
 `;
 
-const waveAnimation = keyframes`
-  to {
-    transform: translateX(-100%);
-  }
-`;
-
-export const WaveSVG = styled.svg`
-  width: 120%;
-  min-width: 1200px;
-  height: 400px;
-  rotate: -6deg;
+export const StyledSVG = styled.svg`
   position: relative;
-  right: 20px;
-  bottom: 80px;
+  width: 130%;
+  overflow: hidden;
+  /* padding: 32px 0px 64px; */
+  /* transform: scale(1.2); */
+  height: 400px;
+  rotate: -8deg;
+  bottom: 100px;
+  z-index: 29;
 `;
 
-export const WavePath = styled.use<{ duration: string }>`
+export const StyledUse = styled.use`
   fill: none;
   stroke-linecap: round;
   stroke-miterlimit: 4;
   opacity: 0.8;
+  animation-name: ${waveAnimation};
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   transition-delay: 0s;
-  /* transition-duration: var(--time-double); */
+  transition-duration: 1.2s;
   transition-property: fill;
   transition-timing-function: ease-in-out;
-  animation: ${waveAnimation} infinite linear,
-    ${colorTransition} 4s ease-in-out infinite,
-    ${widthTransition} 2s ease-in-out infinite;
-  animation-duration: ${(props) => props.duration};
 
   &:nth-child(1) {
     animation-duration: 9s;
-    stroke: red;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #121f4e;
   }
+
   &:nth-child(2) {
-    animation-duration: 5s;
-    stroke: blue;
-    animation-direction: reverse;
+    animation-duration: 9s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
   }
+
   &:nth-child(3) {
-    /* animation-direction: reverse; */
-    animation-duration: 13s;
-    stroke: green;
+    animation-duration: 11s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #16e2c5;
   }
+
   &:nth-child(4) {
-    animation-duration: 19s;
-    stroke: purple;
+    animation-duration: 13s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
   }
+
   &:nth-child(5) {
-    /* animation-direction: reverse; */
-    animation-duration: 12s;
-    stroke: orange;
-    animation-direction: reverse;
+    animation-duration: 14s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #16e2c5;
   }
+
   &:nth-child(6) {
-    /* animation-direction: reverse; */
-    animation-duration: 9s;
-    stroke: orange;
+    animation-duration: 15s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
   }
+
   &:nth-child(7) {
-    /* animation-direction: reverse; */
-    animation-duration: 9s;
-    stroke: orange;
+    animation-duration: 17s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #121f4e;
   }
+
   &:nth-child(8) {
-    /* animation-direction: reverse; */
-    animation-duration: 9s;
-    stroke: orange;
-    animation-direction: reverse;
+    animation-duration: 19s;
+    animation-name: ${waveAnimation}, ${colorTransition}, ${widthTransition};
+    stroke: #28a5ea;
   }
 `;
