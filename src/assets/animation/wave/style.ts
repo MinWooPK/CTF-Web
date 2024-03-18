@@ -40,8 +40,8 @@ export const StyledSVG = styled.svg`
   position: relative;
   width: 120%;
   overflow: hidden;
-  /* padding: 32px 0px 64px; */
-  /* transform: scale(1.2); */
+  padding: 32px 0px 64px;
+  transform: scale(1.2);
   height: 400px;
   rotate: -6deg;
   bottom: 100px;
