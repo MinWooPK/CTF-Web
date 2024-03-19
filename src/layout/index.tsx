@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavHeader from "../components/NavHeader";
+import Cookies from "../components/Cookies";
 
 const Layout = () => {
   return (
@@ -9,6 +10,7 @@ const Layout = () => {
 
       <Outlet />
       <Footer />
+      <Cookies />
     </>
   );
 };

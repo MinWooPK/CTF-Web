@@ -6,7 +6,7 @@ import Home from "./views/Home";
 import ServicesPage from "./views/Services";
 import AboutPage from "./views/About";
 import JobPage from "./views/Job";
-import Cookies from "./components/Cookies";
+import PoliticaCookies from "./views/PoliticaCookies";
 
 export default function App() {
   return (
@@ -19,10 +19,9 @@ export default function App() {
             <Route path="/AboutUs" element={<AboutPage />} />
             <Route path="/Carreras" element={<JobPage />} />
           </Route>
-          <Route path="/Politica" element={<Cookies />} />
+          <Route path="/Politicas" element={<PoliticaCookies />} />
         </Routes>
       </BrowserRouter>
-      <Cookies />
     </ThemeProvider>
   );
 }
