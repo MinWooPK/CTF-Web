@@ -1,5 +1,5 @@
-import Wave from "../../../../assets/animation/wave";
-import { WaveContainer } from "./style";
+// import Wave from "../../../../assets/animation/wave";
+import { Wave, WaveContainer } from "./style";
 
 const WaveAnimation = () => {
   return (

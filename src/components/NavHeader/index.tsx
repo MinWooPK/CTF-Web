@@ -50,7 +50,9 @@ const NavHeader = () => {
     <Navbar>
       <ContainerNavbar>
         <LogoContainer>
-          <Logo />
+          <a href="/">
+            <Logo />
+          </a>
         </LogoContainer>
         <SiteMenu>
           <StieMenuLi>

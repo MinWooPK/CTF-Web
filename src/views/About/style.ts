@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.principal.pure};
-  padding: 160px 0 130px;
+  padding: 60px 0 130px;
   @media (max-width: 768px) {
     padding: 90px 0 10px;
   }
@@ -11,12 +11,28 @@ export const ContainerBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 0 120px;
+  gap: 80px;
+  padding: 0 120px 80px;
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 20px 80px;
   }
 `;
+
+export const SubContainerBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-direction: column;
+`;
+
+export const SubContainerBoxDetail = styled.div`
+  max-width: 726px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+export const SubContainerBoxImg = styled.div``;
+
 export const ContainerTitle = styled.div`
   color: #1c1c1c;
   text-align: center;
@@ -34,7 +50,6 @@ export const ContainerDetail = styled.div`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  padding-top: 8px;
   @media (max-width: 768px) {
     font-size: 18px;
   }

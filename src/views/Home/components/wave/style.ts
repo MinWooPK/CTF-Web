@@ -1,14 +1,5 @@
 import styled, { keyframes } from "styled-components";
-// import WaveImg from "../../../../assets/animation/wave";
-const WaveImg: string = require("../../../../assets/animation/wave");
-
-export const WaveContainer = styled.div`
-  /* bottom: 0; */
-  width: 100%;
-  overflow: hidden;
-  /* position: absolute; */
-  z-index: 100;
-`;
+import WaveImg from "./../../../../assets/svg/Wave.svg";
 
 export const waveAnimation = keyframes`
   0% {
@@ -28,25 +19,31 @@ const swellAnimation = keyframes`
 `;
 
 export const Wave = styled.div`
-  background: url(${WaveImg}) repeat-x;
-  width: 4000px;
-  height: 198px; /* Ajusta el alto de la ola */
-  animation: ${waveAnimation} 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
+  background: url(${WaveImg}) no-repeat;
+  width: 100%;
+  /* background-color: red; */
+  height: 498px; /* Ajusta el alto de la ola */
+  /* animation: ${waveAnimation} 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+  /* transform: translate3d(0, 0, 0); */
   position: absolute;
   bottom: 0;
   left: 0;
-
-  &:nth-of-type(2) {
-    background: url(${WaveImg}) repeat-x;
-    width: 4000px;
-    height: 160px;
-    animation: ${waveAnimation} 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-      ${swellAnimation} 7s ease -1.25s infinite;
-    opacity: 1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-  }
+`;
+export const WaveContainer = styled.div`
+  /* height: 5%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  background: #015871; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 298px;
+  height: 498px; /* Ajusta el alto de la ola */
+  z-index: 1;
+  overflow: hidden;
+  /* background: #053745; */
 `;
