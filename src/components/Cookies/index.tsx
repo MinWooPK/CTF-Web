@@ -54,7 +54,7 @@ const CookiesNotification: React.FC = () => {
   // Renderizar los componentes estilizados y manejar el evento onClick en el botón de aceptar cookies
   return (
     <>
-      <AvisoCookies activo={2}>
+      <AvisoCookies activo={cookiesAccepted}>
         {/* <CookieImage src={ Cookies} alt="Galleta" /> */}
         <Cookies></Cookies>
         <Paragraph>
@@ -71,7 +71,7 @@ const CookiesNotification: React.FC = () => {
           Aviso de Cookies
         </Link>
       </AvisoCookies>
-      <Background activo={2} />
+      <Background activo={cookiesAccepted} />
     </>
   );
 };
