@@ -22,7 +22,10 @@ export const SubContainerBox = styled.div`
   display: flex;
   align-items: center;
   gap: 70px;
-  flex-direction: column;
+  @media (max-width: 768px) {
+    padding: 90px 0 10px;
+    flex-direction: column;
+  }
 `;
 
 export const SubContainerBoxDetail = styled.div`
@@ -31,7 +34,12 @@ export const SubContainerBoxDetail = styled.div`
   flex-direction: column;
   gap: 40px;
 `;
-export const SubContainerBoxImg = styled.div``;
+export const SubContainerBoxImg = styled.div`
+  width: 100%;
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+`;
 
 export const ContainerTitle = styled.div`
   color: #1c1c1c;

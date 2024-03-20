@@ -58,8 +58,8 @@ const CookiesNotification: React.FC = () => {
         {/* <CookieImage src={ Cookies} alt="Galleta" /> */}
         <Cookies></Cookies>
         <Paragraph>
-          <b>Sólo utilizamos cookies técnicas</b>
-          para mejorar tu experiencia mientras navegas por nuestra web
+          <b>Sólo utilizamos cookies técnicas</b> &nbsp; para mejorar tu
+          experiencia mientras navegas por nuestra web
         </Paragraph>
         <ButtonsCookies>
           <RejectCookies onClick={handleAcceptCookies}>
