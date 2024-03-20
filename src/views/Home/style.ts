@@ -10,6 +10,7 @@ export const HomeMainContainer = styled.section`
   padding-top: 160px;
   @media (max-width: 1020px) {
     padding-top: 100px;
+    height: 500px;
   }
 `;
 export const HomeTitle = styled.div`
@@ -46,6 +47,7 @@ export const HomeDetail = styled.div`
   }
   span {
     color: #2e838f;
+    font-weight: 500;
   }
 `;
 // s

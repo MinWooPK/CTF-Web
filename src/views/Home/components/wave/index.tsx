@@ -40,7 +40,7 @@ const WaveAnimation = () => {
             y="7"
             stroke="green"
             fill="none"
-          />{" "}
+          />
           {/* <StyledUse
             xlinkHref="#gentle-wave"
             x="50"

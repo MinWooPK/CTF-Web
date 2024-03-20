@@ -58,7 +58,7 @@ export const StyledLink = styled(Link)`
 export const FooterDetail = styled.div`
   display: flex;
   flex-direction: column;
-  /* text-align: center; */
+  text-align: center;
   gap: 2px;
   color: #fff;
   font-size: 12px;

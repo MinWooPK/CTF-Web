@@ -45,7 +45,8 @@ export const CookieImage = styled.img`
 export const Paragraph = styled.p`
   margin-bottom: 48px;
   padding-top: 32px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 100;
 `;
 
 export const Button = styled.button`

@@ -18,9 +18,11 @@ import {
 } from "./style";
 
 const ServiceSection = () => {
+  const [navVisible, setNavVisible] = useState<boolean>(false);
+
   const [isVisible, setIsVisible] = useState(false);
   const { ref: serviceRef, inView: serviceInView } = useInView({
-    threshold: 0.175, // Detecta cuando el 50% del elemento está en la vista
+    threshold: 0.15, // Detecta cuando el 50% del elemento está en la vista
   });
 
   useEffect(() => {
@@ -55,6 +57,16 @@ const ServiceSection = () => {
     },
   ];
 
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("Contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    if (navVisible) {
+      setNavVisible(false);
+    }
+  };
+
   return (
     <ServiceContainer>
       <ServiceDetail>Nuestros Servicios</ServiceDetail>
@@ -64,7 +76,7 @@ const ServiceSection = () => {
             key={index}
             initial={{ opacity: 0, y: 100 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
           >
             <ServiceDetailSubScetion key={index} isReversed={index === 1}>
               <ServiceDetailSubScetion1>
@@ -75,13 +87,13 @@ const ServiceSection = () => {
                   </ServiceDetailSubTitleDetail>
                 ))}
                 <ServiceDetailButton>
-                  <a
-                    href="mailto:codetofit@codetofit.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Button children={"Saber más"} type={"primary"} />
-                  </a>
+                  {/* <a rel="noreferrer" style={{ width: "100%" }}> */}
+                  <Button
+                    children={"Saber más"}
+                    type={"primary"}
+                    onHandleClick={handleContactClick}
+                  />
+                  {/* </a> */}
                 </ServiceDetailButton>
               </ServiceDetailSubScetion1>
               <ServiceHomeSVG>{section.homeComponent}</ServiceHomeSVG>

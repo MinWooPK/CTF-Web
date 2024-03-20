@@ -43,6 +43,10 @@ export const ContainerWave = styled.div`
   height: 330px;
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 168px;
+    padding-top: 24px;
+  }
 `;
 
 // Create global styles
@@ -84,7 +88,7 @@ export const StyledUse = styled.use`
     /* stroke: red !important; */
   }
   &:nth-child(4) {
-    animation-delay: -4s;
+    animation-delay: -6s;
     animation-duration: 3s;
     /* stroke: red !important; */
   }

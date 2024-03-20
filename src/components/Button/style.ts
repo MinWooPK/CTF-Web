@@ -37,6 +37,9 @@ export const StyledButton = styled.button<StyledButtonProps>`
      @media (max-width: 768px) {
       width:310px
   }
+  @media (max-width: 525px) {
+      width:100%
+  }
   span {
       position: relative;
     }
@@ -104,7 +107,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
     }
     padding:16px 50px;
     @media (max-width: 768px) {
-      font-size:16px;
+      font-size:18px;
       width:265px
     padding: 13px 66px; /* Cambiar padding en dispositivos móviles */
   }

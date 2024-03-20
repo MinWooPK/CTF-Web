@@ -66,7 +66,7 @@ export const StieMenuLi = styled.li`
   list-style: none;
   transition: all 0.35s ease-in-out;
   @media (max-width: 1020px) {
-    width: 100px;
+    width: 100%;
   }
 `;
 
@@ -277,6 +277,7 @@ export const MobileUlDiv = styled.div`
   margin-top: 148px;
   align-items: center;
   width: 100%;
+  text-align: center;
 `;
 
 export const LogoContainerText = styled.div`

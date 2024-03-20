@@ -58,9 +58,9 @@ const NavHeader = () => {
           <StieMenuLi>
             <StieMenuHref href="/">Inicio</StieMenuHref>
           </StieMenuLi>
-          <StieMenuLi>
+          {/* <StieMenuLi>
             <StieMenuHref onClick={handleContactClick}>Servicios</StieMenuHref>
-          </StieMenuLi>
+          </StieMenuLi> */}
           <StieMenuLi>
             <StieMenuHref href="/AboutUs">Sobre Nosotros</StieMenuHref>
           </StieMenuLi>
@@ -92,12 +92,12 @@ const NavHeader = () => {
             <StieMenuLi>
               <StieMenuHref href="/">Inicio</StieMenuHref>
             </StieMenuLi>
-            <StieMenuLi>
-              {/* <StieMenuHref href="/Servicios">Servicios</StieMenuHref> */}{" "}
-              <StieMenuHref onClick={handleContactClick}>
+            {/* <StieMenuLi> */}
+            {/* <StieMenuHref href="/Servicios">Servicios</StieMenuHref> */}{" "}
+            {/* <StieMenuHref onClick={handleContactClick}>
                 Servicios
-              </StieMenuHref>
-            </StieMenuLi>
+              </StieMenuHref> */}
+            {/* </StieMenuLi> */}
             <StieMenuLi>
               <StieMenuHref href="/AboutUs">Sobre Nosostros</StieMenuHref>
             </StieMenuLi>

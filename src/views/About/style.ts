@@ -4,7 +4,7 @@ export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.principal.pure};
   padding: 60px 0 130px;
   @media (max-width: 768px) {
-    padding: 90px 0 10px;
+    padding: 72px 0 10px;
   }
 `;
 export const ContainerBox = styled.div`
@@ -14,7 +14,8 @@ export const ContainerBox = styled.div`
   gap: 80px;
   padding: 0 120px 80px;
   @media (max-width: 768px) {
-    padding: 0 20px 80px;
+    padding: 0 24px 80px;
+    gap: 0;
   }
 `;
 
@@ -23,7 +24,7 @@ export const SubContainerBox = styled.div`
   align-items: center;
   gap: 70px;
   @media (max-width: 768px) {
-    padding: 90px 0 10px;
+    padding: 48px 0 10px;
     flex-direction: column;
   }
 `;
@@ -66,7 +67,7 @@ export const ContainerSubTitle = styled.div`
   color: #2e838f;
   font-size: 28px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   @media (max-width: 1020px) {
     font-size: 18px;

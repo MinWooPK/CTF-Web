@@ -8,12 +8,19 @@ export const ServiceContainer = styled.div`
   justify-content: center;
   gap: 120px;
   padding: 50px 0 140px;
+  @media (max-width: 768px) {
+    gap: 48px;
+    padding: 50px 0 80px;
+  }
 `;
 export const ServiceSubContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 200px;
+  @media (max-width: 768px) {
+    gap: 140px;
+  }
 `;
 
 export const ConctactDetail = styled.p`
@@ -29,6 +36,9 @@ export const ServiceDetail = styled.h2`
   font-style: normal;
   font-weight: 250;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 export const ServiceDetailSubScetion = styled(motion.div)<{
   isReversed?: boolean;
@@ -45,7 +55,7 @@ export const ServiceDetailSubScetion = styled(motion.div)<{
   @media (max-width: 1020px) {
     flex-direction: column-reverse;
     text-align: start;
-    padding: 20px 10px;
+    padding: 20px 24px;
     gap: 40px;
   }
 `;

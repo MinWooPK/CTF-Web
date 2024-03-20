@@ -4,9 +4,9 @@ export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.principal.pure};
 `;
 export const JobContainer = styled.div`
-  padding: 160px 120px 130px;
+  padding: 60px 120px 130px;
   @media (max-width: 768px) {
-    padding: 90px 11px 10px;
+    padding: 72px 24px 80px;
   }
 `;
 export const JobDetailContainer = styled.div`
@@ -14,6 +14,10 @@ export const JobDetailContainer = styled.div`
   flex-direction: column;
   gap: 56px;
   padding-top: 80px;
+  @media (max-width: 768px) {
+    padding-top: 48px;
+    gap: 44px;
+  }
 `;
 export const JobTitle = styled.h1`
   color: #1c1c1c;
@@ -22,6 +26,9 @@ export const JobTitle = styled.h1`
   font-weight: 700;
   line-height: normal;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 44px;
+  }
 `;
 export const JobDetail = styled.p`
   color: #1c1c1c;
@@ -29,6 +36,9 @@ export const JobDetail = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 export const JobSubDetailBold = styled.span`
   font-weight: 500;
@@ -38,8 +48,9 @@ export const JobSubDetail = styled.p`
   color: #2e838f;
   font-size: 28px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
+  font-size: 18px;
 `;
 
 export const JobThemeSpecialContainer = styled.div`
@@ -76,6 +87,10 @@ export const JobThemeSpecialDetail = styled.div`
   gap: 48px;
   cursor: pointer;
   box-shadow: 0px 5px 11px rgba(164, 164, 164, 0.25);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05); /* Escalar ligeramente en hover */
+  }
   @media (max-width: 425px) {
     width: 169px;
     height: 288px;

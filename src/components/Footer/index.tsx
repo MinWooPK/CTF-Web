@@ -43,7 +43,7 @@ function Footer() {
   };
   const links = [
     { text: "Inicio", url: "/" },
-    { text: "Servicios", url: "", onClick: handleContactClick }, // Cambiado
+    // { text: "Servicios", url: "", onClick: handleContactClick }, // Cambiado
     { text: "Sobre Nosotros", url: "/AboutUs" },
     { text: "Carreras", url: "/Carreras" },
   ];
@@ -52,9 +52,7 @@ function Footer() {
       <LinkBar>
         {links.map((link, index) => (
           <LinkLi key={index}>
-            <StyledLink to={link.url} onClick={link.onClick}>
-              {link.text}
-            </StyledLink>
+            <StyledLink to={link.url}>{link.text}</StyledLink>
           </LinkLi>
         ))}
       </LinkBar>
