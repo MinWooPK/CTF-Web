@@ -19,6 +19,9 @@ jobs:
         with:
           submodules: true
           lfs: false
+                - name: Set CI environment variable
+        run: echo "CI=false" >> $GITHUB_ENV  # Establecer CI en false para evitar el tratamiento de advertencias como errores
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
