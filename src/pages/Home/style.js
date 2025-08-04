@@ -120,13 +120,13 @@ export const HomeDetail = styled.div`
   position: relative;
   padding: 20px;
   width: 100%;
-  /* height: 100vh; */
+  height: 100%;
   overflow: hidden; /* oculta lo que se pase del límite */
   background-image: url(${EtherealHome2});
   background-repeat: no-repeat;
-  background-size: contain; /* o usa cover según prefieras */
-  background-position: bottom; /* opcional */
-
+  background-size: cover; /* o usa cover según prefieras */
+  background-size: 100% 80%; /* aumenta tamaño para que “baje” más */
+  background-position: center bottom; /* pegado abajo */
   @media (max-width: ${breakpoint}) {
     padding: 28px;
   }
