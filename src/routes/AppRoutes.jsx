@@ -8,7 +8,7 @@ import {
 // layouts
 // import ProtectedRoute from "@layouts/ProtectedRoute";
 import Home from "@pages/Home";
-import ContactUsPage from "@pages/ContactUsPage";
+import CollaborationsPage from "@pages/CollaborationsPage";
 import AboutUsPage from "@pages/AboutUsPage";
 
 // pages
@@ -27,13 +27,9 @@ const AppRoutes = () => {
           }
         /> */}
         <Route path="/" element={<Home />} />
-        <Route path="/ContactUs" element={<ContactUsPage />} />
+        <Route path="/Collaborations" element={<CollaborationsPage />} />
         <Route path="/AboutUs" element={<AboutUsPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-
-        {/* <Route path="/login" element={<Login />} />
-        {/* Ruta catch-all para cualquier ruta no definida */}
-        {/* <Route path="*" element={<Navigate to="/not-found" replace />} /> */}
       </Routes>{" "}
     </Router>
   );

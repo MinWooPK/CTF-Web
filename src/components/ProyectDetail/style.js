@@ -151,7 +151,7 @@ export const DemoButton = styled.button`
   font-weight: 600;
 
   &:hover {
-    background-color: #4338ca;
+    background-color: #829b9a;
   }
 `;
 

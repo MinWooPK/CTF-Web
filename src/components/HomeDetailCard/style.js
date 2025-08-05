@@ -35,6 +35,7 @@ export const CardMain = styled.div`
   box-sizing: border-box;
   @media (max-width: ${breakpoint}) {
     padding: 0 30px;
+    align-items: flex-start;
   }
 `;
 

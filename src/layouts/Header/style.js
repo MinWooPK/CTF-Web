@@ -65,8 +65,10 @@ export const HeaderRoute = styled.div`
 
   &.active {
     color: #053745;
+    font-size: 16px;
     font-weight: 700;
     text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   &:hover {

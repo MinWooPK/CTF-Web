@@ -168,7 +168,7 @@ const HomeTemplateDesktop = () => {
             className={`section ${isDetailVisible ? "visible" : ""}`}
           >
             <HomeDetailContainer>
-              <HomeDetailTitleWrapper className="bg-red">
+              <HomeDetailTitleWrapper>
                 <HomeDetailTitle>Creadores de software</HomeDetailTitle>
                 <HomeDetailSubTitle>
                   que tus colaboradores amarán usar{" "}

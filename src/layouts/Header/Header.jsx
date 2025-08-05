@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import {
   HeaderMain,
@@ -18,6 +19,7 @@ import { CTF_Logo } from "@assets/icons/CTF-Logo";
 
 const Header = ({ scrollToContact }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -39,6 +41,7 @@ const Header = ({ scrollToContact }) => {
   }, []);
 
   const handleMenuNavigate = (path) => {
+    console.log("RUTA ACTUAL:", location.pathname);
     if (menuOpen) {
       setIsAnimating(true);
       setMenuOpen(false);
@@ -88,13 +91,24 @@ const Header = ({ scrollToContact }) => {
 
         {!isMobile && (
           <HeaderRouteContainer>
-            <HeaderRoute onClick={() => handleMenuNavigate("/")}>
+            <HeaderRoute
+              onClick={() => handleMenuNavigate("/")}
+              className={location.pathname === "/" ? "active" : ""}
+            >
               Inicio
             </HeaderRoute>
-            <HeaderRoute onClick={() => handleMenuNavigate("/AboutUs")}>
+            <HeaderRoute
+              onClick={() => handleMenuNavigate("/AboutUs")}
+              className={location.pathname === "/AboutUs" ? "active" : ""}
+            >
               Sobre nosotros
             </HeaderRoute>
-            <HeaderRoute onClick={() => handleMenuNavigate("/Contactus")}>
+            <HeaderRoute
+              onClick={() => handleMenuNavigate("/Collaborations")}
+              className={
+                location.pathname === "/Collaborations" ? "active" : ""
+              }
+            >
               Proyecto/Clientes
             </HeaderRoute>
           </HeaderRouteContainer>
@@ -108,13 +122,22 @@ const Header = ({ scrollToContact }) => {
       )}
       {isMenuVisible && (
         <MobileMenuContainer className={menuOpen ? "menu-open" : "menu-close"}>
-          <HeaderRoute onClick={() => handleMenuNavigate("/")}>
+          <HeaderRoute
+            onClick={() => handleMenuNavigate("/")}
+            className={location.pathname === "/" ? "active" : ""}
+          >
             Inicio
           </HeaderRoute>
-          <HeaderRoute onClick={() => handleMenuNavigate("/AboutUs")}>
+          <HeaderRoute
+            onClick={() => handleMenuNavigate("/AboutUs")}
+            className={location.pathname === "/AboutUs" ? "active" : ""}
+          >
             Sobre nosotros
           </HeaderRoute>
-          <HeaderRoute onClick={() => handleMenuNavigate("/Contactus")}>
+          <HeaderRoute
+            onClick={() => handleMenuNavigate("/Collaborations")}
+            className={location.pathname === "/Collaborations" ? "active" : ""}
+          >
             Proyecto/Clientes
           </HeaderRoute>
         </MobileMenuContainer>

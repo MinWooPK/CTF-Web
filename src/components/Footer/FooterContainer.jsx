@@ -26,7 +26,7 @@ const FooterContainer = () => {
           <Link to="/AboutUs" onClick={() => window.scrollTo(0, 0)}>
             Sobre Nosotros
           </Link>
-          <Link to="/Contactus" onClick={() => window.scrollTo(0, 0)}>
+          <Link to="/Collaborations" onClick={() => window.scrollTo(0, 0)}>
             Servicios
           </Link>
         </RightSection>

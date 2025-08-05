@@ -79,7 +79,7 @@ const buttonVariants = {
     font-weight: 600;
 
     &:hover {
-      background-color: #4338ca;
+      background-color: #829b9a;
     }
   `,
   secondary: css`
@@ -90,7 +90,8 @@ const buttonVariants = {
     font-weight: 600;
 
     &:hover {
-      background-color: #c7d2fe;
+      background-color: #829b9a;
+      color: white;
     }
   `,
 };
@@ -170,13 +171,13 @@ export const HomeDetailCardContainer = styled.div`
 
 export const HomeDetailContainerSecond = styled.div``;
 
-export const HomeDetailContainerSecondTitleContainer = styled.h2`
+export const HomeDetailContainerSecondTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 150px 80px;
-  @media (max-width: 600px) {
-    padding: 0;
+  @media (max-width: ${breakpoint}) {
+    padding: 100px 0px;
   }
 `;
 
@@ -281,14 +282,25 @@ export const HomeDetailTecno = styled.div`
 `;
 
 export const ImgTec = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 70px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 60px;
+  justify-content: start;
   align-items: center;
   padding-top: 45px;
+
+  @media (max-width: ${breakpoint}) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 40px;
+  }
 `;
+
 export const ImgTecItem = styled.img`
   width: ${(props) => props.width || "80px"};
   height: ${(props) => props.height || "80px"};
+  @media (max-width: ${breakpoint}) {
+    width: calc(${(props) => props.width || "80px"} * 0.75);
+    height: calc(${(props) => props.height || "80px"} * 0.75);
+  }
 `;
