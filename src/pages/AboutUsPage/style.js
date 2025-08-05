@@ -98,7 +98,7 @@ export const AboutUsButton = styled.button`
   font-weight: 500;
 
   &:hover {
-    background-color: #4338ca;
+    background-color: #829b9a;
   }
 `;
 
